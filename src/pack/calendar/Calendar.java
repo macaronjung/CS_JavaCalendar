@@ -59,8 +59,21 @@ public class Calendar {
 			case 12:
 				System.out.println("31일");
 				break;
-		}
+		}/*switch end*/
 		
+		//숫자를 입력받아 해당하는 달의 최대 일수를 출력(배열 이용)
+		System.out.println();
+		
+		System.out.println("어떤 달의 최대 일수를 구하고 싶어?");
+		Scanner scanner2 = new Scanner(System.in);
+		int month2 = scanner2.nextInt();
+		scanner.close(); //실행 후 종료해주기
+		
+		//배열 시작 0부터 인거 조심!!!
+		int[] maxDays = {31,28,31,30,31,30,31,31,30,31,30,31};
+		
+		//배열 순서 0부터 시작이기 때문에 - 1 조심!!!
+		System.out.println(month2 + "월은 " + maxDays[month2 - 1] + "일까지 있어");
 	}
 
 }
